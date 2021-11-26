@@ -1,4 +1,4 @@
-# MTP_AD_GD
+# MTP_AD_PaperMachine
 This Git repository demonstrate master thesis project on the topic: **Anomaly Detection and Forecasting for Time Series Sensor Data of a Paper Machine**
 
 ## Abstract
@@ -25,7 +25,7 @@ break happens, the entire process is stopped, the paper reel is taken out, then 
 problem(s) is fixed, and the production continues. The resumption can be taken more than
 an hour. Hence, the cost of this lost production time is notable for the corresponding factory.
 Even a 5% reduction in the break occurrences will provide a high-cost saving for the
-factory [1] (https://arxiv.org/abs/1809.10717). Furthermore, these uncommon events (breaks) create imbalanced time series
+factory (https://arxiv.org/abs/1809.10717) [1]. Furthermore, these uncommon events (breaks) create imbalanced time series
 data that negatively affect the performances of the supervised DNN models. Therefore,
 forming the dataset more balanced and forecasting anomalies in some timesteps in advance
 are recognized as the most significant challenges.
