@@ -1,0 +1,59 @@
+1.RAWData
+2. [radata] => all ones except the first one will be removed => onebreakData
+3. [onebreakData] => normalized and mean zero : normalizedData
+4. normalizedData =>
+
+	for anomalypoint in [1,2,3]:
+		for windowsSize in [5,10,15]:
+			a. [normalizedData] => remove break rows, and assign the anomalypoint to 1 -> newData
+			b. [newData] => remove rows that distances between two consecutive ones are less than windowssize -> newDataNolessWindowSize
+			c. [newDataNolessWindowSize] => based on windowssize apply rolling{if end of window touch 1 -> label is 1 else lebel is 0} -> rolledData {0,1} data+label
+			
+			d. weightedFeatures<=featureAnalazer (labels=rolledData[:,0],data=rolledData[:,1:])
+			
+			e. threshold apply on [weightedFeatures] => remainingFeatures
+			
+			f. filter the rolling data based on remainingFeatures => finalData
+			
+			g. save the finalData with appropriate name. for examp 1_5_data will save 3*3= 9 data 
+			
+=====================================
+9 times will be done for each storedData
+====================================
+for learning everytime you load one of  the storeddata and then:
+
+remove m roles (that has lebel=1) for noneseendata = > data=storedData - noneseendata
+select remaining ones from data and apply augmentation
+
+merge augmetation to the data - > augedData
+
+split for train and valid
+...
+
+
+for foldNum, (trainIndex, testIndex) in enumerate(skf.split(X,y),start=1):
+
+    yXtrain1, yXtest= data[trainIndex], data[testIndex]
+
+    X2=yXtrain1[:,1:]
+    y2=yXtrain1[:,0]
+    for foldNum, (trainIndex, valIndex) in enumerate(skf.split(X2,y2),start=1):
+        yXtrain2, yXvalid = data[trainIndex], data[testIndex]
+        ''' 
+        model[i]=train your model with yXtrain2 and valid 
+        validloss[i]= .....
+        
+    best model entekhab mikoni based on valid looss
+    bestmodel.predict(yxtest)
+    bestmodel.predict(noneseen)
+    placeholdertest -> append (test error )
+    placeholdernoonseen -> append (noonseen error)
+    print kon har koofti ke doos dari
+        '''
+
+'''
+ma baghi cherto pertan
+'''
+
+			
+	
