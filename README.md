@@ -12,8 +12,7 @@ and develop some oversampling approaches for decreasing the adverse effects of t
 corresponding imbalanced labeled dataset. Moreover, the Deep Neural Network (DNN)
 and Long Short-Term Memory (LSTM) models are employed to perform our classification.
 Our investigations reveal that the pre-processing and oversampling approaches increased
-classification metric recall and imbalanced impact. However, other classification metrics such as precision and F1-score could not be improved due to faulty data gathering and
-preparation of the paper machine.
+classification metric recall and imbalanced impact.
 
 ## Problem Statement
 A real-world dataset was produced by paper machine manufacturing. The connected multivariate
