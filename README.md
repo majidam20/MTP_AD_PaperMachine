@@ -1,5 +1,5 @@
 # MTP_AD_PaperMachine
-This Git repository demonstrate master thesis project on the topic: **Anomaly for Time Series Data of a Paper Machine.**
+This Git repository demonstrate master thesis project on the topic: **Anomaly Detection for Time Series Data of a Paper Machine.**
 
 ## Abstract
 The use of sensors in our lives has been increasing in recent years, especially in industries.
